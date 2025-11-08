@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(120deg, #3C5B9E, #9E7F3C);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.formulario {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.formulario h1 {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid silver;
+    margin: 0 20px;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.formulario form {
+    padding: 20px;
+}
+
+.input-group {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0 5px;
+    height: 50px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+/* Efectos de focus mejorados para móviles */
+.input-group input:focus {
+    border-color: #3C5B9E;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+    top: -20px;
+    left: 5px;
+    color: #3C5B9E;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.recordar {
+    margin: -5px 0 20px 5px;
+    color: blue;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.recordar:hover {
+    text-decoration: underline;
+}
+
+button[type="submit"] {
+    width: 100%;
+    height: 50px;
+    background: #3C5B9E;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+button[type="submit"]:hover {
+    background: #2a4a8a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+.registro {
+    margin: 25px 0 15px 0;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+}
+
+.registro a {
+    color: blue;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.registro a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries para diferentes tamaños de pantalla */
+
+/* Tablets */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    .formulario {
+        max-width: 350px;
+    }
+    
+    .formulario form {
+        padding: 15px;
+    }
+    
+    .input-group {
+        margin: 25px 0;
+    }
+    
+    button[type="submit"] {
+        height: 48px;
+        font-size: 17px;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+        align-items: flex-start;
+        padding-top: 40px;
+    }
+    
+    .formulario {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+    
+    .formulario h1 {
+        padding: 15px 0;
+        margin: 0 15px;
+        font-size: 1.4rem;
+    }
+    
+    .formulario form {
+        padding: 15px 20px;
+    }
+    
+    .input-group {
+        margin: 20px 0;
+    }
+    
+    .input-group input {
+        height: 45px;
+        font-size: 16px;
+    }
+    
+    button[type="submit"] {
+        height: 46px;
+        font-size: 16px;
+    }
+    
+    .registro {
+        font-size: 15px;
+        margin: 20px 0 10px 0;
+    }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 320px) {
+    .formulario form {
+        padding: 10px 15px;
+    }
+    
+    .formulario h1 {
+        font-size: 1.3rem;
+        padding: 12px 0;
+    }
+    
+    .input-group input {
+        height: 42px;
+        font-size: 15px;
+    }
+    
+    button[type="submit"] {
+        height: 44px;
+        font-size: 15px;
+    }
+}
+
+/* Para landscape en móviles */
+@media (max-height: 500px) and (orientation: landscape) {
+    body {
+        align-items: flex-start;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .formulario {
+        max-width: 90%;
+    }
+    
+    .formulario h1 {
+        padding: 15px 0;
+    }
+    
+    .input-group {
+        margin: 15px 0;
+    }
+    
+    .input-group input {
+        height: 40px;
+    }
+}
